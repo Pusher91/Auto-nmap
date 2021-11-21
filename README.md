@@ -1,14 +1,14 @@
-<h1>Auto-nmap</h1>
+Auto-nmap
 
 Automatically runs nmap scans against a target ip address.
 
 Automatic scans:
-nmap &lt;target&gt; -p- -oN tcp_ping_scan
-nmap &lt;target&gt; -sV -sC -oN -p &lt;open ports from previous scan&gt; -tcp_script_scan
-nmap &lt;target&gt; -p- -sU -sV -oN ping_udp_scan
-nmap &lt;target&gt; -sU -sV -sC -p &lt;open ports from previous scan&gt; -oN udp_script_scan
+nmap <target> -p- -oN tcp_ping_scan
+nmap <target> -sV -sC -oN -p <open ports from previous scan> -tcp_script_scan
+nmap <target> -p- -sU -sV -oN ping_udp_scan
+nmap <target> -sU -sV -sC -p <open ports from previous scan> -oN udp_script_scan
 
-<h3>Script output:</h3>
+Script output:
 
 Scanning for open tcp ports...
 + Finished scanning for open ports. 'tcp_ping_scan' created.
