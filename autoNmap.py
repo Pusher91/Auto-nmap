@@ -35,7 +35,6 @@ def tcp_script_scan():
         matches2 = re.findall("\d{1,5}[0-9]", str(matches))
         open_tcp_ports = ",".join(matches2)
         
-        #nmap -p <open ports> -sV -sC -oN tcp_script_scan
         subprocess.run(["nmap", "-p","{}".format(open_tcp_ports), "{}".format(target), "-sV", "-sC", "-oN", "tcp_script_scan"], stdout=subprocess.DEVNULL)
         print("+ Finished tcp script scan. 'tcp_script_scan' created.")
     
@@ -68,7 +67,6 @@ def udp_script_scan():
         matches2 = re.findall("\d{1,5}[0-9]", str(matches))
         open_udp_ports = ",".join(matches2)
 
-        #nmap -p <open ports> -sU -sV -sC -oN udp_script_scan
         subprocess.run(["nmap", "-p","{}".format(open_udp_ports), "{}".format(target), "-sU", "-sV", "-sC", "-oN", "udp_script_scan"], stdout=subprocess.DEVNULL)
         print("+ Finished udp script scan. 'udp_script_scan' created.")
     
