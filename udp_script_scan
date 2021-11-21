@@ -1,0 +1,15 @@
+# Nmap 7.91 scan initiated Sat Nov 20 22:15:41 2021 as: nmap -p 111 -sU -sV -sC -oN udp_script_scan 127.0.0.1
+Nmap scan report for localhost (127.0.0.1)
+Host is up.
+
+PORT    STATE SERVICE VERSION
+111/udp open  rpcbind 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|_  100000  3,4          111/udp6  rpcbind
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Nov 20 22:15:43 2021 -- 1 IP address (1 host up) scanned in 2.38 seconds
