@@ -2,7 +2,7 @@
 
 Automatically runs nmap scans against a target ip address.
 
-## Automatic scans:
+### Automatic scans:
 + nmap <target> -p- -oN tcp_ping_scan
 + nmap <target> -sV -sC -oN -p \<open ports from previous scan\> -oN tcp_script_scan
 + nmap <target> -p- -sU -sV -oN ping_udp_scan
@@ -10,7 +10,7 @@ Automatically runs nmap scans against a target ip address.
 
 
 
-## Script output:
+### Script output:
 
 Scanning for open tcp ports...
 + Finished scanning for open ports. 'tcp_ping_scan' created.
