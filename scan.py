@@ -52,7 +52,7 @@ def udp_ping_scan():
 
         print("Scanning for open udp ports...")
 
-        subprocess.run(["nmap", "-sU","{}".format(target), "-oN", "udp_ping_scan"], stdout=subprocess.DEVNULL)
+        subprocess.run(["nmap", "-sU", "-sV","{}".format(target), "-oN", "udp_ping_scan"], stdout=subprocess.DEVNULL)
         print("+ Finished udp ping scan. 'udp_ping_scan' created.")
     
     elif udp_ping_scan_check == 0:
