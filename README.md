@@ -1,4 +1,4 @@
-# Auto-nmap
+# autoNmap
 
 Automatically runs nmap.  Scans for all open ports and then run nmap script scans against them.
 
