@@ -20,13 +20,15 @@ def tcp_ping_scan():
         print("------------------------------------------------------")
         
         subprocess.run(["nmap", "-p-","{}".format(target), "-oN", "tcp_ping_scan"])
-        
+
+        print("\n")
         print("******************************************************")
         print("+ Finished scanning for open ports. 'tcp_ping_scan' created.")
         print("******************************************************")
 
     elif tcp_ping_scan_check == 0:
         
+        print("\n")
         print("******************************************************")
         print("- Skipping tcp ping scan.  'tcp_ping_scan' already exists.")
         print("******************************************************")
@@ -37,6 +39,7 @@ def tcp_script_scan():
 
     if tcp_script_scan_check != 0:
         
+        print("\n")
         print("******************************************************")
         print("Running nmap scripts against open tcp ports...")
         print("------------------------------------------------------")
@@ -50,12 +53,15 @@ def tcp_script_scan():
         
         subprocess.run(["nmap", "-p","{}".format(open_tcp_ports), "{}".format(target), "-sV", "-sC", "-oN", "tcp_script_scan"])
         
+        print("\n")
         print("******************************************************")
         print("+ Finished tcp script scan. 'tcp_script_scan' created.")
         print("******************************************************")
     
     elif tcp_script_scan_check == 0:
+       
         
+        print("\n")
         print("******************************************************")
         print("- Skipping tcp script scan.  'tcp_script_scan' already exists.")
         print("******************************************************")
@@ -66,18 +72,21 @@ def udp_ping_scan():
     
     if udp_ping_scan_check != 0:
         
+        print("\n")
         print("******************************************************")
         print("Scanning for open udp ports...")
         print("------------------------------------------------------")
         
         subprocess.run(["nmap", "-sU", "-sV","{}".format(target), "-oN", "udp_ping_scan"])
         
+        print("\n")
         print("******************************************************")
         print("+ Finished udp ping scan. 'udp_ping_scan' created.")
         print("******************************************************")
     
     elif udp_ping_scan_check == 0:
 
+        print("\n")
         print("******************************************************")
         print("- Skipping udp ping scan.  'udp_ping_scan' already exists.")
         print("******************************************************")
@@ -88,6 +97,7 @@ def udp_script_scan():
     
     if udp_script_scan_check != 0:
         
+        print("\n")
         print("******************************************************")
         print("Running nmap scripts against open udp ports...")
         print("------------------------------------------------------")
@@ -101,18 +111,17 @@ def udp_script_scan():
 
         subprocess.run(["nmap", "-p","{}".format(open_udp_ports), "{}".format(target), "-sU", "-sV", "-sC", "-oN", "udp_script_scan"])
         
+        print("\n")
         print("******************************************************")
         print("+ Finished udp script scan. 'udp_script_scan' created.")
         print("******************************************************")
     
     elif udp_script_scan_check == 0:
         
+        print("\n")
         print("******************************************************")
         print("- Skipping udp ping scan.  'udp_script_scan' already exists.")
         print("******************************************************")
-
-
-
 
 tcp_ping_scan()
 tcp_script_scan()
