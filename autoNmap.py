@@ -120,7 +120,7 @@ def udp_script_scan():
         
         print("\n")
         print("******************************************************")
-        print("- Skipping udp ping scan.  'udp_script_scan' already exists.")
+        print("- Skipping udp script scan.  'udp_script_scan' already exists.")
         print("******************************************************")
 
 tcp_ping_scan()
